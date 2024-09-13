@@ -50,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0)),
-    url('src/img/911-GT3-RS_8.webp');
+    url('../img/911-GT3-RS_8.webp');
     background-position: center;
     background-size: cover;
     width: 100%;

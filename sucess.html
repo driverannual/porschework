@@ -11,7 +11,7 @@
 
 <header>
     <div class="navbar">
-        <a class="logoPorsche" href="/"><img src="/src/img/logoText/Porsche_Schriftzug.svg" alt="porscheLogo"></a>
+        <a class="logoPorsche" href="/"><img src="src/img/logoText/Porsche_Schriftzug.svg" alt="porscheLogo"></a>
     </div>
     <div class="Head">
         <div class="initHead">
@@ -24,28 +24,4 @@
 <body>
     </div>
 </body>
-<script>
-function scrollToSection() {
-    const section = document.querySelector('.main');
-    const offset = 200;
-    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-        top: sectionTop - offset,
-        behavior: 'smooth'
-    });
-}
-document.addEventListener('DOMContentLoaded', function() {
-    const telefoneInput = document.getElementById('numero');
-    telefoneInput.addEventListener('input', function(event) {
-        let value = event.target.value;
-        value = value.replace(/\D/g, '');
-        if (value.length > 11) {
-            value = value.slice(0, 11);
-        }
-        value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-        event.target.value = value;
-    });
-});
-
-</script>
 </html>

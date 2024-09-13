@@ -77,22 +77,6 @@ body {
     }
 }
 
-.seta {
-    margin: 0;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
-.seta:hover {
-    cursor: pointer;
-}
-
 .initHead {
     position: relative;
     z-index: 2;
@@ -125,18 +109,6 @@ body {
     }
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.form {
-    max-width: 100%;
-    width: 600px;
-    margin: 0 auto;
-}
-
 .main {
     display: flex;
     flex-direction: column;
@@ -147,62 +119,8 @@ input::-webkit-inner-spin-button {
     padding: 0 1rem;
 }
 
-.names {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    display: flex;
-}
-
 @media (max-width: 270px) {
     .names {
         flex-direction: column;
     }
-}
-
-.nameA {
-    margin-right: 0.2rem;
-}
-
-.nameB {
-    margin-left: 0.2rem;
-}
-
-input, select {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: var(--normal);
-    font-size: var(--small);
-    border-radius: 0.2rem;
-    margin-bottom: 1rem;
-    border: solid black 1px;
-}
-
-select:hover {
-    cursor: pointer;
-}
-
-label {
-    max-width: fit-content;
-    margin-left: 0.4rem;
-}
-
-.enviar {
-    font-family: var(--normal);
-    font-size: var(--body);
-    width: 100%;
-    padding: 10px;
-    border-radius: 0.2rem;
-    background-color: black;
-    color: white;
-    transition: 100ms ease-out;
-    margin-bottom: 200px;
-}
-
-.enviar:hover {
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    transition: 100ms ease-out;
 }

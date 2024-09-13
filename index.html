@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/src/img/fav/logo.png">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <title>Seu próximo carro</title>
+</head>
+
+<header>
+    <div class="navbar">
+        <a class="logoPorsche" href="/sucess.html"><img src="src/img/logoText/Porsche_Schriftzug.svg" alt="porscheLogo"></a>
+    </div>
+    <div class="Head">
+        <button class="seta" onclick="scrollToSection()"><img src="/src/img/icons/arrow_down_24dp.svg" alt=""></button>
+        <div class="initHead">
+            <h1>Customize seu Porsche</h1>
+            <h2>Um piloto de verdade merece ser único.</h2>
+        </div>
+    </div>
+</header>
+
+<body>
+    <form action="/sucess.html">
+        <div class="main">
+            <div class="form">
+                <div class="seuNome">
+                    <label for="nameA">Nome</label><br>
+                    <div class="names">
+                        <input class="nameA" id="nameA" name="name" type="text" required placeholder="Primeiro nome">
+                        <input class="nameB" id="surname" name="surname" type="text" required placeholder="Último nome">
+                    </div>
+                </div>
+                <div class="seuEstado">
+                    <label for="state">Estado</label><br>
+                    <select name="state" id="state">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ" selected>Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                    <div class="select-arrow"></div>
+                </div>
+                <div class="emailNumero">
+                    <label for="email">E-mail</label><br>
+                    <input id="email" name="email" type="email" placeholder="Ex: joaozin@gmail.com" required><br>
+                    <label for="numero">Telefone</label><br>
+                    <input id="numero" name="numero" type="text" placeholder="Ex: 21 91234-1234" required>
+                </div>
+                <div class="interesseModelo">
+                    <label for="carOpt">Escolha seu carro</label><br>
+                    <select name="carOpt" id="carOpt">
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="911">911</option>
+                        <option value="GT3">911 GT3</option>
+                        <option value="GT3RS">911 GT3 RS</option>
+                        <option value="911TurboS">911 Turbo S</option>
+                        <option value="Cayman">718 Cayman</option>
+                        <option value="Boxter">718 Boxter</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <button class="enviar" type="submit">Enviar</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</body>
+<script>
+function scrollToSection() {
+    const section = document.querySelector('.main');
+    const offset = 200;
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+        top: sectionTop - offset,
+        behavior: 'smooth'
+    });
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const telefoneInput = document.getElementById('numero');
+    telefoneInput.addEventListener('input', function(event) {
+        let value = event.target.value;
+        value = value.replace(/\D/g, '');
+        if (value.length > 11) {
+            value = value.slice(0, 11);
+        }
+        value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+        event.target.value = value;
+    });
+});
+
+</script>
+</html>

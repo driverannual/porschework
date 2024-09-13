@@ -1,0 +1,208 @@
+@font-face {
+    font-family: PorscheNextB;
+    src: url(../fonts/PorscheNext-Bold.ttf);
+}
+
+@font-face {
+    font-family: PorscheNextR;
+    src: url(../fonts/PorscheNext-Regular.otf);
+}
+
+@font-face {
+    font-family: PorscheNextT;
+    src: url(../fonts/PorscheNext-Thin.otf);
+}
+
+:root {
+    --normal: PorscheNextR, Helvetica, sans-serif;
+    --bold: PorscheNextB, Helvetica, sans-serif;
+    --thin: PorscheNextT, Helvetica, sans-serif;
+    --title: 4rem;
+    --sub: 1.5rem;
+    --body: 1.15rem;
+    --small: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.569), rgba(0, 0, 0, 0));
+    position: fixed;
+    z-index: 5;
+}
+
+.logoPorsche > img{
+    width: 10rem;
+    margin: 1rem;
+    filter: brightness(0%) saturate(0%) invert(1);
+}
+
+.Head {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0)),
+    url('/src/img/911-GT3-RS_8.webp');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 980px;
+    margin: 0;
+    
+}
+
+@media (max-width: 600px) {
+    .Head {
+        height: 580px;
+    }
+}
+
+@media (max-height: 980px) {
+    .Head {
+        height: 580px;
+    }
+}
+
+@media (max-height: 600px) {
+    .Head {
+        height: 300px;
+    }
+}
+
+.seta {
+    margin: 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.seta:hover {
+    cursor: pointer;
+}
+
+.initHead {
+    position: relative;
+    z-index: 2;
+    margin: auto 0;
+}
+
+.initHead > h1, .initHead > h2 {
+    font-family: var(--thin);
+    font-size: var(--title);
+    text-align: left;
+    margin: auto 10%;
+    justify-content: center;
+    color: white;
+    line-height: 1.3
+}
+
+@media (max-width: 600px) {
+    .initHead > h1, .initHead > h2 {
+        font-size: calc(var(--title) - 1rem); /* Corrigido */
+    }
+}
+
+.initHead > h2 {
+    font-size: var(--sub);
+}
+
+@media (max-width: 600px) {
+    .initHead > h2 {
+        font-size: calc(var(--sub) - .2rem);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form {
+    max-width: 100%;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    font-family: var(--normal);
+    font-size: var(--body);
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.names {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+}
+
+@media (max-width: 270px) {
+    .names {
+        flex-direction: column;
+    }
+}
+
+.nameA {
+    margin-right: 0.2rem;
+}
+
+.nameB {
+    margin-left: 0.2rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: var(--normal);
+    font-size: var(--small);
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+    border: solid black 1px;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+label {
+    max-width: fit-content;
+    margin-left: 0.4rem;
+}
+
+.enviar {
+    font-family: var(--normal);
+    font-size: var(--body);
+    width: 100%;
+    padding: 10px;
+    border-radius: 0.2rem;
+    background-color: black;
+    color: white;
+    transition: 100ms ease-out;
+    margin-bottom: 200px;
+}
+
+.enviar:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: 100ms ease-out;
+}

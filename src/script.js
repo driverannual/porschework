@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const imageUrls = [
-  "src/img/fav/logo.png",
-  "src/img/logoText/Porsche_Schriftzug.svg",
-  "src/img/icons/arrow_down_24dp.svg",
-  "src/img/Porsche-911-GT3-RS (4).jpg",
+  "./img/fav/logo.png",
+  "./img/logoText/Porsche_Schriftzug.svg",
+  "./img/icons/arrow_down_24dp.svg",
+  "./img/Porsche-911-GT3-RS (4).jpg",
   "https://driverannual.github.io/porschework/src/img/fav/logo.png",
 ];
 
